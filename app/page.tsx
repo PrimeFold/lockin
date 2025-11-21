@@ -1,8 +1,11 @@
-import React from 'react'
-
+import LandingPage from "@/components/hero-section"
 const page = () => {
   return (
-    <div>page</div>
+    <main>
+      <LandingPage/>
+    </main>
+    
+    
   )
 }
 

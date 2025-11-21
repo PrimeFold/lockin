@@ -33,6 +33,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <div className="absolute inset-0 top-0 z-[-1]">
+          </div>
           {children}
         </ThemeProvider>
       </body>
