@@ -95,9 +95,11 @@ const StyledWrapper = styled.div`
   .btn-53 .original {
     background: #fff;
     color: #000;
-    display: grid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
     inset: 0;
-    place-content: center;
     position: absolute;
     transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1);
   }

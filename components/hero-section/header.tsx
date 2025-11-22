@@ -44,7 +44,7 @@ export default function HomeHeader({
   ];
   
   return (
-    <header className="w-full top-0 z-10 absolute lg:z-10 lg:flex lg:items-center lg:px-8 lg:py-0 text-primary-foreground">
+    <header className="w-full sticky top-0  lg:z-10 lg:flex lg:items-center lg:px-8 lg:py-0 text-primary-foreground">
       <div className="flex md:max-w-screen-lg mx-auto w-full items-center relative justify-between  h-16 px-4  p-2 bg-white border dark:border-neutral-800 border-neutral-200   rounded-b-xl  dark:bg-zinc-950">
         {isMobile && (
           <Drawer.Root direction="left" open={isOpen} onOpenChange={setIsOpen}>

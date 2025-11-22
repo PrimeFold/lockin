@@ -1,8 +1,9 @@
-import LandingPage from "@/components/hero-section"
+import Landing from "@/components/Landing/page"
+
 const page = () => {
   return (
     <main>
-      <LandingPage/>
+      <Landing/>
     </main>
     
     

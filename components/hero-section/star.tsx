@@ -1,6 +1,7 @@
+import Link from 'next/link';
 import React from 'react';
 
-const Button = () => {
+const StarButton = () => {
   return (
     <button className="group relative dark:bg-neutral-800 bg-neutral-200 rounded-full p-px overflow-hidden">
       <span className="absolute inset-0 rounded-full overflow-hidden">
@@ -31,11 +32,14 @@ const Button = () => {
           <span className="rounded-full size-11 absolute opacity-0 dark:opacity-30 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 blur-lg" style={{animation: '14s ease-in-out 0s infinite alternate none running star-shine', background: 'linear-gradient(135deg, rgb(59, 196, 242), rgb(122, 105, 249), rgb(242, 99, 120), rgb(245, 131, 63))'}} />
         </span>
         <span className="bg-gradient-to-b ml-1.5 dark:from-white dark:to-white/50 from-neutral-950 to-neutral-950/50 bg-clip-text text-xs text-transparent group-hover:scale-105 transition transform-gpu">
-          Star itsKrish01 on Github
+        <Link href="https://github.com/PrimeFold/lockin">
+            Star @PrimeFold on Github
+        </Link>
+          
         </span>
       </span>
     </button>
   );
 }
 
-export default Button;
+export default StarButton;
