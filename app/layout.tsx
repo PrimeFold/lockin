@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Inter } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
 
@@ -9,13 +9,11 @@ const defaultUrl = process.env.VERCEL_URL
 
 export const metadata: Metadata = {
   metadataBase: new URL(defaultUrl),
-  title: "Next.js and Supabase Starter Kit",
-  description: "The fastest way to build apps with Next.js and Supabase",
+  title: "Lockin",
+  description: "Block distracting websites and increase productivity",
 };
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  display: "swap",
+const interFont = Inter({
   subsets: ["latin"],
 });
 
@@ -26,15 +24,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.className} antialiased`}>
+      <body className={`${interFont.className} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <div className="absolute inset-0 top-0 z-[-1]">
-          </div>
           {children}
         </ThemeProvider>
       </body>

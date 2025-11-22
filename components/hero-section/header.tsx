@@ -1,6 +1,5 @@
 "use client";
 import { useMediaQuery } from "@/hooks/use-media-query";
-import ThemeSwitch from "./theme-switcher";
 import { cn } from "@/lib/utils";
 import { AlignJustify, X } from "lucide-react";
 import { Component, Layout, Wallet } from "lucide-react";
@@ -8,6 +7,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Drawer } from "vaul";
+import NavbarButton from "./navbar-button";
+import ThemeSwitch from "./theme-switcher";
 
 export function XIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
@@ -114,13 +115,16 @@ export default function HomeHeader({
             </nav>
           </>
         )}
+        
         <nav className="flex items-center gap-2">
-          <Link
-            href="/auth/login"
-            className=" bg-[#334cec] text-white border dark:border-neutral-800 border-neutral-200 h-10 items-center flex justify-center px-3 rounded-md hover:bg-[#2a3ec7] transition-colors"
-          >
-            Get Started
-          </Link>
+          <div className="flex gap-2 border-2 h-fit w-fit ">
+            <ThemeSwitch localTheme={localTheme} setLocalTheme={setLocalTheme}/>
+          </div>
+          <NavbarButton>
+            <Link href="/auth/login">
+              Get Started
+            </Link>
+          </NavbarButton>
         </nav>
       </div>
     </header>

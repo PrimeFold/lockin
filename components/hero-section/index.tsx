@@ -6,6 +6,8 @@ import { useEffect, useMemo, useState } from "react";
 import HomeHeader from "./header";
 import ShimmerButton from "./shimmer-button";
 import WordAnimator from "./word-animator";
+import GetStartedButton from "./get-started-button";
+
 
 
 
@@ -150,10 +152,11 @@ const LandingPage = () => {
               </span>
             </ShimmerButton>
 
-            <Button className=" rounded-full px-4 h-12">
+            
+            <GetStartedButton>
               Watch a Demo
               <ChevronsRight />
-            </Button>
+            </GetStartedButton>
           </div>
           {/* <p className="text-center py-2">65% off during pre-sale.</p> */}
         </article>
