@@ -165,10 +165,10 @@ const Feature1 = () => {
                 animate={{ scale: 1 }}
                 transition={{ delay: 2.8, duration: 0.3, type: "spring" }}
               >
-                10M+
+                10k+
               </motion.h1>
               <p className="text-sm dark:text-gray-400 text-gray-600">
-                Trusted by productive individuals worldwide
+                Trusted by productive individuals 
               </p>
             </motion.div>
           </TimelineContent>
@@ -398,9 +398,9 @@ const Feature1 = () => {
                   animate="visible"
                   custom={0}
                 >
-                  Hey Rachel, thanks for reaching out! I see that your last
-                  transaction was a dining purchase, which qualifies for 5x
-                  points, but only for Platinum Status Tier members.
+                  Hey! You've been in deep focus mode for 45 minutes now. 
+                  Great job staying locked in! You've successfully blocked 
+                  12 distraction attempts so far.
                 </motion.div>
 
                 <motion.div
@@ -410,12 +410,12 @@ const Feature1 = () => {
                   animate="visible"
                   custom={1}
                 >
-                  You are currently in the{" "}
+                  You're on a{" "}
                   <span className="font-semibold text-blue-500 border-b border-dashed border-blue-500">
-                    Gold Status Tier
+                    7-day focus streak
                   </span>
-                  , which means you currently earn 3x points on dining
-                  transactions.
+                  ! Keep going to unlock the Productivity Master badge 
+                  and reach your weekly goal.
                   <motion.button
                     className="absolute -bottom-2 right-0 flex items-center gap-1 rounded-full bg-orange-500 px-2 py-1 text-xs text-white shadow-sm hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
                     initial={{ scale: 0, rotate: 180 }}
@@ -439,7 +439,7 @@ const Feature1 = () => {
               >
                 <motion.input
                   type="text"
-                  placeholder="Ok, how do I get to the next tier?"
+                  placeholder="Can I extend my focus session?"
                   className="flex-1 rounded-lg border dark:border-neutral-600 border-gray-300 dark:bg-neutral-800 bg-gray-100 px-4 py-2 dark:text-white text-black focus:outline-none focus:ring-2 focus:ring-purple-500"
                   initial={{ width: "60%" }}
                   animate={{ width: "100%" }}

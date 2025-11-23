@@ -3,58 +3,53 @@
 import { useState } from "react";
 
 const cards = [
-  // copy not visible
   {
     id: 1,
-    logo: "/openai-white.svg",
-    name: "Grok 3",
-    contextWindow: "128k",
+    icon: "📱",
+    name: "Social Media",
+    sitesCount: "25+ sites",
   },
-  // copy not visible
   {
     id: 2,
-    logo: "/anthropic-white.svg",
-    name: "Grok 3",
-    contextWindow: "128k",
+    icon: "🎮",
+    name: "Gaming",
+    sitesCount: "15+ sites",
   },
   {
     id: 3,
-    logo: "/grok-white.svg",
-    name: "Grok 3 Mini Beta",
-    contextWindow: "131k",
+    icon: "🎬",
+    name: "Entertainment",
+    sitesCount: "30+ sites",
   },
   {
     id: 4,
-    logo: "/openai-white.svg",
-    name: "GPT 4.5 Preview",
-    contextWindow: "128k",
+    icon: "📰",
+    name: "News & Media",
+    sitesCount: "20+ sites",
   },
   {
     id: 5,
-    logo: "/anthropic-white.svg",
-    name: "Grok 3",
-    contextWindow: "128k",
+    icon: "🛍️",
+    name: "Shopping",
+    sitesCount: "18+ sites",
   },
-  // copy not visible
   {
     id: 6,
-    logo: "/grok-white.svg",
-    name: "Grok 3",
-    contextWindow: "128k",
+    icon: "💬",
+    name: "Messaging",
+    sitesCount: "12+ sites",
   },
-  // copy not visible
   {
     id: 7,
-    logo: "/openai-white.svg",
-    name: "Grok 3",
-    contextWindow: "128k",
+    icon: "🎵",
+    name: "Music & Audio",
+    sitesCount: "10+ sites",
   },
-  // copy not visible
   {
     id: 8,
-    logo: "/anthropic-white.svg",
-    name: "Grok 3",
-    contextWindow: "128k",
+    icon: "🎯",
+    name: "Custom Lists",
+    sitesCount: "Unlimited",
   },
 ];
 
@@ -135,18 +130,15 @@ function HoverTranslateTwo() {
                 <div className="w-full">
                   <div className="flex items-center gap-3 w-full justify-between pr-2 pl-1">
                     <div className="flex items-center gap-2">
-                      <img
-                        src={card.logo}
-                        alt={card.name}
-                        width={20}
-                        height={20}
-                      />
+                      <span className="text-2xl">
+                        {card.icon}
+                      </span>
                       <span className="text-white font-medium -ml-0.5">
                         {card.name}
                       </span>
                     </div>
-                    <span className="text-white font-medium">
-                      {card.contextWindow} Context
+                    <span className="text-white font-medium text-xs">
+                      {card.sitesCount}
                     </span>
                   </div>
                 </div>
