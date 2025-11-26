@@ -18,7 +18,7 @@ const WordAnimator: React.FC<WordAnimatorProps> = ({
   React.useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % words.length);
-    }, duration * 1000);
+    }, duration * 667); // Making it 1.5x as fast
 
     return () => clearInterval(interval);
   }, [words.length, duration]);
@@ -40,7 +40,7 @@ const WordAnimator: React.FC<WordAnimatorProps> = ({
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -40, opacity: 0 }}
           transition={{
-            duration: 0.5,
+            duration: 0.33,
             ease: [0.4, 0.0, 0.2, 1], // Custom easing for smooth animation
           }}
           style={{

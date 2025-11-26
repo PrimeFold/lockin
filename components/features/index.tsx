@@ -15,8 +15,8 @@ const Feature1 = () => {
       opacity: 1,
       filter: "blur(0px)",
       transition: {
-        delay: i * 0.4,
-        duration: 0.5,
+        delay: i * 0.267, // 3/4 of original delay
+        duration: 0.33, // 3/4 of original duration
       },
     }),
     hidden: {
@@ -32,8 +32,8 @@ const Feature1 = () => {
     visible: (i: number) => ({
       scaleY: 1,
       transition: {
-        delay: 2.8 + i * 0.1,
-        duration: 0.8,
+        delay: 2.1 + i * 0.075, // 3/4 of original delay
+        duration: 0.375, // 3/4 of original duration
         ease: "easeOut",
       },
     }),
@@ -46,8 +46,8 @@ const Feature1 = () => {
       x: 0,
       opacity: 1,
       transition: {
-        delay: 3.2 + i * 0.6,
-        duration: 0.5,
+        delay: 2.4 + i * 0.45, // 3/4 of original delay
+        duration: 0.375, // 3/4 of original duration
         ease: "easeOut",
       },
     }),
@@ -60,7 +60,7 @@ const Feature1 = () => {
   };
 
   return (
-    <section className="max-w-7xl mx-auto p-4 dark:bg-transparent bg-white relative overflow-hidden" ref={featuresRef}>
+    <section className="max-w-7xl mx-auto p-4 pt-0 pb-16 dark:bg-transparent bg-transparent relative overflow-hidden" ref={featuresRef} id="features">
       
       <div className="min-w-7xl relative z-10">
         <article className="max-w-5xl mx-auto py-10 text-center space-y-2 px-8">
@@ -129,7 +129,7 @@ const Feature1 = () => {
               className="flex -space-x-3 relative z-10"
               initial={{ x: -30, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ delay: 1.8, duration: 0.6 }}
+              transition={{ delay: 0.6, duration: 0.375 }} // Moderately faster
             >
               {[
                 "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=200",
@@ -145,8 +145,8 @@ const Feature1 = () => {
                   initial={{ scale: 0, rotate: 180 }}
                   animate={{ scale: 1, rotate: 0 }}
                   transition={{
-                    delay: 2.0 + i * 0.2,
-                    duration: 0.5,
+                    delay: 0.67 + i * 0.067, // 3/4 of original delay
+                    duration: 0.375, // 3/4 of original duration
                     type: "spring",
                     stiffness: 200,
                   }}
@@ -157,13 +157,13 @@ const Feature1 = () => {
               className="relative z-10"
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 2.6, duration: 0.5 }}
+              transition={{ delay: 0.67, duration: 0.375 }} // Moderately faster
             >
               <motion.h1
                 className="text-4xl font-semibold sm:pt-0 pt-20 dark:text-white text-black"
                 initial={{ scale: 0.8 }}
                 animate={{ scale: 1 }}
-                transition={{ delay: 2.8, duration: 0.3, type: "spring" }}
+                transition={{ delay: 0.67, duration: 0.225, type: "spring" }} // Moderately faster
               >
                 10k+
               </motion.h1>
@@ -185,7 +185,7 @@ const Feature1 = () => {
               className="text-4xl font-semibold dark:text-white text-black"
               initial={{ y: -10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 1.6, duration: 0.5 }}
+              transition={{ delay: 0.6, duration: 0.375 }} // Moderately faster
             >
               Block Durations
             </motion.h1>
@@ -193,7 +193,7 @@ const Feature1 = () => {
               className="text-sm dark:text-gray-400 text-gray-600"
               initial={{ y: -10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 1.8, duration: 0.5 }}
+              transition={{ delay: 0.45, duration: 0.375 }} // Moderately faster
             >
               Choose how long you want to stay focused
             </motion.p>
@@ -228,8 +228,8 @@ const Feature1 = () => {
                   initial={{ x: -30, opacity: 0, rotate: item.rotation + 10 }}
                   animate={{ x: 0, opacity: 1, rotate: item.rotation }}
                   transition={{
-                    delay: i * 0.2,
-                    duration: 0.6,
+                    delay: i * 0.133, // 3/4 of original delay
+                    duration: 0.375, // 3/4 of original duration
                     type: "spring",
                     stiffness: 100,
                   }}
@@ -270,7 +270,7 @@ const Feature1 = () => {
               xmlns="http://www.w3.org/2000/svg"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 2.4, duration: 0.5 }}
+              transition={{ delay: 0.6, duration: 0.375 }} // Moderately faster
             >
               {[224, 163, 106, 50].map((y, i) => (
                 <motion.path
@@ -280,7 +280,7 @@ const Feature1 = () => {
                   strokeDasharray="2 2"
                   initial={{ pathLength: 0 }}
                   animate={{ pathLength: 1 }}
-                  transition={{ delay: 2.6 + i * 0.1, duration: 0.8 }}
+                  transition={{ delay: 0.5 + i * 0.15, duration: 0.375 }} // Moderately faster
                 />
               ))}
 
@@ -420,7 +420,7 @@ const Feature1 = () => {
                     className="absolute -bottom-2 right-0 flex items-center gap-1 rounded-full bg-orange-500 px-2 py-1 text-xs text-white shadow-sm hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
                     initial={{ scale: 0, rotate: 180 }}
                     animate={{ scale: 1, rotate: 0 }}
-                    transition={{ delay: 4.6, duration: 0.4, type: "spring" }}
+                    transition={{ delay: 1.0, duration: 0.375, type: "spring" }} // Moderately faster
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -435,7 +435,7 @@ const Feature1 = () => {
                 className="flex items-center gap-2 border-t dark:border-neutral-700 border-gray-200 p-4"
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 4.8, duration: 0.5 }}
+                transition={{ delay: 1.2, duration: 0.375 }} // Moderately faster
               >
                 <motion.input
                   type="text"
@@ -443,13 +443,13 @@ const Feature1 = () => {
                   className="flex-1 rounded-lg border dark:border-neutral-600 border-gray-300 dark:bg-neutral-800 bg-gray-100 px-4 py-2 dark:text-white text-black focus:outline-none focus:ring-2 focus:ring-purple-500"
                   initial={{ width: "60%" }}
                   animate={{ width: "100%" }}
-                  transition={{ delay: 5.0, duration: 0.6 }}
+                  transition={{ delay: 1.5, duration: 0.375 }} // Moderately faster
                 />
                 <motion.button
                   className="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-600 text-white hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
                   initial={{ scale: 0, rotate: 180 }}
                   animate={{ scale: 1, rotate: 0 }}
-                  transition={{ delay: 5.2, duration: 0.4, type: "spring" }}
+                  transition={{ delay: 1.33, duration: 0.375, type: "spring" }} // Moderately faster
                   whileHover={{ scale: 1.1, rotate: 10 }}
                   whileTap={{ scale: 0.9 }}
                 >

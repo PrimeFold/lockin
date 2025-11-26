@@ -101,7 +101,7 @@ const StyledWrapper = styled.div`
     gap: 0.5rem;
     inset: 0;
     position: absolute;
-    transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1);
+    transition: transform 0.15s cubic-bezier(0.87, 0, 0.13, 1); /* 3/4 duration of original */
   }
 
   .btn-53:hover .original {
@@ -117,7 +117,7 @@ const StyledWrapper = styled.div`
   .btn-53 span {
     opacity: 0;
     transform: translateY(-15px);
-    transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1), opacity 0.2s;
+    transition: transform 0.15s cubic-bezier(0.87, 0, 0.13, 1), opacity 0.15s; /* 3/4 duration of original */
   }
 
   .btn-53 span:nth-child(2n) {
@@ -130,23 +130,23 @@ const StyledWrapper = styled.div`
   }
 
   .btn-53:hover span:nth-child(2) {
-    transition-delay: 0.1s;
+    transition-delay: 0.075s; /* 3/4 delay of original */
   }
 
   .btn-53:hover span:nth-child(3) {
-    transition-delay: 0.2s;
+    transition-delay: 0.15s; /* 3/4 delay of original */
   }
 
   .btn-53:hover span:nth-child(4) {
-    transition-delay: 0.3s;
+    transition-delay: 0.225s; /* 3/4 delay of original */
   }
 
   .btn-53:hover span:nth-child(5) {
-    transition-delay: 0.4s;
+    transition-delay: 0.3s; /* 3/4 delay of original */
   }
 
   .btn-53:hover span:nth-child(6) {
-    transition-delay: 0.5s;
+    transition-delay: 0.375s; /* 3/4 delay of original */
   }`;
 
 export default GetStartedButton;

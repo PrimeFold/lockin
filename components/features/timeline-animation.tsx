@@ -28,8 +28,8 @@ export const TimelineContent = <T extends keyof HTMLElementTagNameMap = "div">({
       y: 0,
       opacity: 1,
       transition: {
-        delay: i * 0.5,
-        duration: 0.5,
+        delay: i * 0.33, // 3/4 of original delay
+        duration: 0.375, // 3/4 of original duration
       },
     }),
     hidden: {

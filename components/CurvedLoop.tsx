@@ -63,7 +63,7 @@ const CurvedLoop: FC<CurvedLoopProps> = ({
     let frame = 0;
     const step = () => {
       if (!dragRef.current && textPathRef.current) {
-        const delta = dirRef.current === 'right' ? speed : -speed;
+        const delta = dirRef.current === 'right' ? speed * 1.5 : -speed * 1.5; // 1.5x the speed
         const currentOffset = parseFloat(textPathRef.current.getAttribute('startOffset') || '0');
         let newOffset = currentOffset + delta;
         const wrapPoint = spacing;

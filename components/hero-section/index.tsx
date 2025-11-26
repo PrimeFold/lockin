@@ -8,9 +8,10 @@ import ShimmerButton from "./shimmer-button";
 import WordAnimator from "./word-animator";
 import GetStartedButton from "./get-started-button";
 import StarButton from "./star";
+import Background from "../Background";
+import StarBorder from "../StarBorder";
 
 import { div } from "motion/react-client";
-
 
 
 
@@ -20,21 +21,21 @@ const HeroSection = () => {
   const words = ["Focused", "Productive", "Unstoppable", "Disciplined"];
   return (
     <div className={localTheme === "dark" ? "dark" : "light"}>
-      
-      <section className=" h-screen  overflow-hidden  relative pb-20 dark:bg-transparent bg-transparent  ">
+      <section className="min-h-screen relative pb-20 dark:bg-transparent bg-transparent">
+        <Background />
         
-        <article className="grid 2xl:pt-52 2xl:pb-24 py-40 relative z-[2] sm:px-0 px-4">
+        <article className="grid 2xl:pt-52 2xl:pb-24 md:py-40 py-32 relative z-[2] sm:px-0 px-4">
           <div className="flex justify-center mb-6">
             <StarButton />
           </div>
-          <h1 className="xl:text-7xl md:text-6xl sm:text-5xl text-3xl text-primary text-center font-semibold  tracking-tight">
+          <h1 className="xl:text-7xl md:text-6xl sm:text-5xl text-3xl text-primary text-center font-semibold tracking-tight">
             <span className="text-[2.5rem]">Block Distractions,</span>{" "}
-            <span className="relative translate-x-0  flex gap-2 justify-center">
+            <span className="relative translate-x-0 flex gap-2 justify-center">
               Stay{" "}
               <WordAnimator
                 words={words}
                 duration={5}
-                className=" italic w-fit pr-3 dark:bg-gray-800 bg-gray-200 dark:border-neutral-800 border-neutral-200"
+                className="italic w-fit pr-3 dark:bg-gray-800 bg-gray-200 dark:border-neutral-800 border-neutral-200"
               />{" "}
             </span>
           </h1>
@@ -48,7 +49,7 @@ const HeroSection = () => {
             <ShimmerButton
               borderRadius={"100px"}
               className={cn(
-                "flex items-center gap-2 w-fit rounded-full  text-white  border sm:px-4 px-2  py-2 ",
+                "flex items-center gap-2 w-fit rounded-full text-white border sm:px-4 px-2 py-2",
               )}
               background={"#334cec"}
             >
@@ -63,7 +64,6 @@ const HeroSection = () => {
               <ChevronsRight />
             </GetStartedButton>
           </div>
-          {/* <p className="text-center py-2">65% off during pre-sale.</p> */}
         </article>
 
       </section>

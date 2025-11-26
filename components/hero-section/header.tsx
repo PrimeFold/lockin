@@ -38,17 +38,17 @@ export default function HomeHeader({
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { href: "/pages/features", label: "Features", icon: Component },
-    { href: "/pages/pricing", label: "Pricing", icon: Wallet },
+    { href: "/#features", label: "Features", icon: Component },
+    { href: "/#pricing", label: "Pricing", icon: Wallet },
     { href: "/pages/about", label: "About", icon: Layout },
   ];
   
   return (
-    <header className="w-full sticky top-0  lg:z-10 lg:flex lg:items-center lg:px-8 lg:py-0 text-primary-foreground">
-      <div className="flex md:max-w-screen-lg mx-auto w-full items-center relative justify-between  h-16 px-4  p-2 bg-white border dark:border-neutral-800 border-neutral-200   rounded-b-xl  dark:bg-zinc-950">
+    <header className="w-full sticky top-0 z-50 lg:flex lg:items-center lg:px-8 lg:py-0 text-primary-foreground backdrop-blur-md backdrop-saturate-150">
+      <div className="flex md:max-w-screen-lg mx-auto w-full items-center relative justify-between h-16 px-4 p-2 bg-white/95 dark:bg-zinc-950/95 border dark:border-neutral-800 border-neutral-200 rounded-b-xl shadow-sm">
         {isMobile && (
           <Drawer.Root direction="left" open={isOpen} onOpenChange={setIsOpen}>
-            <Drawer.Trigger className="px-3 text-white h-10 grid place-content-center bg-gradient-to-b from-blue-500 from-100% to-blue-700  w-fit rounded-lg">
+            <Drawer.Trigger className="px-3 text-white h-10 grid place-content-center bg-gradient-to-b from-blue-500 from-100% to-blue-700 w-fit rounded-lg">
               <AlignJustify />
             </Drawer.Trigger>
             <Drawer.Portal>
@@ -78,7 +78,7 @@ export default function HomeHeader({
                       key={item.href}
                       href={item.href}
                       className={cn(
-                        "cursor-pointer gap-1 select-none p-2 dark:text-white dark:hover:text-blue-200 hover:text-base-blue rounded-md transition-colors duration-200 flex items-center justify-start",
+                        "cursor-pointer gap-1 select-none p-2 dark:text-white dark:hover:text-blue-200 hover:text-base-blue rounded-md transition-colors duration-150 flex items-center justify-start", // 3/4 duration of original
                         pathname.startsWith(item.href) &&
                           "dark:text-white dark:border dark:border-blue-950 text-base-blue dark:bg-neutral-900 bg-neutral-200",
                       )}
@@ -103,7 +103,7 @@ export default function HomeHeader({
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    "cursor-pointer gap-1 select-none p-2 dark:hover:text-blue-200 hover:text-base-blue   rounded-md transition-colors duration-200 flex items-center justify-center",
+                    "cursor-pointer gap-1 select-none p-2 dark:hover:text-blue-200 hover:text-base-blue rounded-md transition-colors duration-150 flex items-center justify-center", // 3/4 duration of original
                     pathname.startsWith(item.href) &&
                       "text-white dark:border dark:border-blue-950 dark:bg-neutral-900 bg-neutral-200",
                   )}
@@ -117,7 +117,7 @@ export default function HomeHeader({
         )}
         
         <nav className="flex items-center gap-2">
-          <div className="flex gap-2 border-2 h-fit w-fit ">
+          <div className="flex gap-2 border-2 h-fit w-fit">
             <ThemeSwitch localTheme={localTheme} setLocalTheme={setLocalTheme}/>
           </div>
           <NavbarButton>

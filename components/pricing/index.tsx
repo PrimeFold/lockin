@@ -18,8 +18,8 @@ export default function PricingSection2() {
       opacity: 1,
       filter: "blur(0px)",
       transition: {
-        delay: i * 0.3,
-        duration: 0.5,
+        delay: i * 0.225, // 3/4 of original delay
+        duration: 0.375, // 3/4 of original duration
       },
     }),
     hidden: {
@@ -34,8 +34,8 @@ export default function PricingSection2() {
       opacity: 1,
       filter: "blur(0px)",
       transition: {
-        delay: i * 0.1,
-        duration: 0.5,
+        delay: i * 0.075, // 3/4 of original delay
+        duration: 0.375, // 3/4 of original duration
       },
     }),
     hidden: {
@@ -60,8 +60,8 @@ export default function PricingSection2() {
   ];
 
   return (
-    <div className="px-4 pt-10 min-h-screen mx-auto relative dark:bg-transparent bg-transparent" ref={pricingRef}>
-      <div className="dark:bg-transparent bg-transparent py-16 px-4 ">
+    <div className="px-4 py-16 mx-auto relative dark:bg-transparent bg-transparent" ref={pricingRef} id="pricing">
+      <div className="dark:bg-transparent bg-transparent py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <TimelineContent
             as="div"
@@ -77,7 +77,7 @@ export default function PricingSection2() {
           <h1 className="md:text-5xl sm:text-4xl text-3xl font-semibold dark:text-white text-gray-900 mb-4 leading-[120%]">
             <VerticalCutReveal
               splitBy="words"
-              staggerDuration={0.15}
+              staggerDuration={0.1125} // 3/4 of original duration
               staggerFrom="first"
               reverse={true}
               containerClassName="justify-center"
@@ -85,7 +85,7 @@ export default function PricingSection2() {
                 type: "spring",
                 stiffness: 250,
                 damping: 40,
-                delay: 0.4,
+                delay: 0.3, // 3/4 of original delay
               }}
             >
               Choose Your Plan
