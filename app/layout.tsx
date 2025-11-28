@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
-import GlobalHeader from "@/components/global-header";
+import ConditionalHeader from "@/components/ConditionalHeader";
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -32,8 +32,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <GlobalHeader />
-          {children}
+          <ConditionalHeader>
+            {children}
+          </ConditionalHeader>
         </ThemeProvider>
       </body>
     </html>
